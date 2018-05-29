@@ -5,7 +5,7 @@ function show_table(){
 
     $pinfo_time = "";
 
-    if (!$src_info['si']['si']['isutc']) $pinfo_time=$pinfo_time." (UTC)";
+    if ($src_info['si']['si']['isutc']) $pinfo_time=$pinfo_time." (UTC)";
 
     $ntime = (time() - $src_info['si']['si']['tzonec']);
     $cur_time=date("Y/m/d H:i:s",$ntime);
